@@ -102,6 +102,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Add.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -137,6 +138,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -151,6 +159,22 @@
     <Compile Include="Migrations\201702021848470_modifiedKeysInAllClasses.cs" />
     <Compile Include="Migrations\201702021848470_modifiedKeysInAllClasses.Designer.cs">
       <DependentUpon>201702021848470_modifiedKeysInAllClasses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702021949110_FixedSpellingInReviewscs.cs" />
+    <Compile Include="Migrations\201702021949110_FixedSpellingInReviewscs.Designer.cs">
+      <DependentUpon>201702021949110_FixedSpellingInReviewscs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702022119405_addedmovieidtoReview.cs" />
+    <Compile Include="Migrations\201702022119405_addedmovieidtoReview.Designer.cs">
+      <DependentUpon>201702022119405_addedmovieidtoReview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702022121571_addedMovietitleToRevie.cs" />
+    <Compile Include="Migrations\201702022121571_addedMovietitleToRevie.Designer.cs">
+      <DependentUpon>201702022121571_addedMovietitleToRevie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702022133093_RemovedMovietitleFromReviewcs.cs" />
+    <Compile Include="Migrations\201702022133093_RemovedMovietitleFromReviewcs.Designer.cs">
+      <DependentUpon>201702022133093_RemovedMovietitleFromReviewcs.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Movie.cs" />
@@ -167,6 +191,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201702021848470_modifiedKeysInAllClasses.resx">
       <DependentUpon>201702021848470_modifiedKeysInAllClasses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702021949110_FixedSpellingInReviewscs.resx">
+      <DependentUpon>201702021949110_FixedSpellingInReviewscs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702022119405_addedmovieidtoReview.resx">
+      <DependentUpon>201702022119405_addedmovieidtoReview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702022121571_addedMovietitleToRevie.resx">
+      <DependentUpon>201702022121571_addedMovietitleToRevie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702022133093_RemovedMovietitleFromReviewcs.resx">
+      <DependentUpon>201702022133093_RemovedMovietitleFromReviewcs.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
