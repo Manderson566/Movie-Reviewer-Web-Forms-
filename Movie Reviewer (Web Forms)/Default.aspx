@@ -10,6 +10,24 @@
 <body>
     <div class ="container">
         <h1>Movie Reviews</h1>
+        <form runat="server" action="Add.aspx" method="post">
+            <div class="form-group">
+                <input type="text" class="form-control" name="MovieReview" placeholder ="Write Your Review" /> 
+                <input type="text" class="form-control" name="MovieRating" placeholder="Rate The Movie 1 to 5" />
+                <input type="text" class="form-control" name="ReviewerName" placeholder="Your Name" />
+                <input type="text" class="form-control" name="GenderofReviewer" placeholder="Your Gender" />
+                <input type="text" class="form-control" name="OccupationOfReviewer" placeholder="Your Gender" />
+                
+            </div>
+            <input type="button" class ="btn btn-default" value="Add" />
+            </form>
+        <select class ="DropDown">
+            <%foreach (var movie in Movies)
+                {%>
+                 <option value="<%=movie.MovieTitle %>"><%= movie.MovieTitle %></option>
+            
+                <% } %>
+        </select>
         <table class ="table">
             <thead>
                 <tr>

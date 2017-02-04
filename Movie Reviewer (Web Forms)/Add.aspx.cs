@@ -19,16 +19,18 @@ namespace Movie_Reviewer__Web_Forms_
                 {
                     var review = new Review
                     {
-                        
                         MovieReview = Request.Form["MovieReview"],
+                        MovieRating = Request.Form["MovieRating"].Count(),
                         ReviewerName = Request.Form["ReviewerName"],
                         GenderofReviewer = Request.Form["GenderofReviewer"],
                         OccupationOfReviewer = Request.Form["OccupationOfReviewer"],
-
-
+                        AgeOfReviewer = Request.Form["AgeOfReviewer"].Count()
 
                     };
+                    db.Review.Add(review);
+                    db.SaveChanges();
                 }
+                Response.Redirect("Default.aspx");
             }
         }
     }

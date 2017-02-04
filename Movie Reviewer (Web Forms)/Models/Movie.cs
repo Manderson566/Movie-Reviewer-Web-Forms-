@@ -12,5 +12,6 @@ namespace Movie_Reviewer__Web_Forms_
         public string Genre { get; set; }
         public string IMDBLink { get; set; }
         public DateTime ReleaseDate { get; set; }
+
     }
 }
