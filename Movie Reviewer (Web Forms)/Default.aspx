@@ -16,10 +16,11 @@
                 <input type="text" class="form-control" name="MovieRating" placeholder="Rate The Movie 1 to 5" />
                 <input type="text" class="form-control" name="ReviewerName" placeholder="Your Name" />
                 <input type="text" class="form-control" name="GenderofReviewer" placeholder="Your Gender" />
-                <input type="text" class="form-control" name="OccupationOfReviewer" placeholder="Your Gender" />
+                 <input type="text" class="form-control" name="AgeofReviewer" placeholder="Your Age" />
+                <input type="text" class="form-control" name="OccupationOfReviewer" placeholder="Your Occupation" />
                 
             </div>
-            <input type="button" class ="btn btn-default" value="Add" />
+            <input type="submit" class ="btn btn-default" value="Add" />
             </form>
         <select class ="DropDown">
             <%foreach (var movie in Movies)
@@ -31,14 +32,14 @@
         <table class ="table">
             <thead>
                 <tr>
-                 <td>Movie</td>
-                 <td>MovieReview</td>
-                 <td>MovieRaiting</td>
-                 <td>ReviewedBy</td>
-                 <td>ReviewerAge</td>
-                 <td>ReviewerGender</td>
-                 <td>ReviewerGender</td>
-                 <td>ReviewCreated</td>
+                 <th>Movie</th>
+                 <th>MovieReview</th>
+                 <th>MovieRaiting</th>
+                 <th>ReviewedBy</th>
+                 <th>ReviewerAge</th>
+                 <th>ReviewerGender</th>
+                 <th>ReviewerOccupation</th>
+                 <th>ReviewCreated</th>
                 </tr>
             </thead>
             <tbody>
@@ -46,7 +47,6 @@
                     {%>
                
                 <tr>
-                    <td><%=Review.MovieId %></td>
                     <td><%=Review.MovieRating %></td>
                     <td><%=Review.AgeOfReviewer %></td>
                     <td><%=Review.GenderofReviewer %></td>

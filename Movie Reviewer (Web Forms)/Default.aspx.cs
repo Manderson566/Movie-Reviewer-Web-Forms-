@@ -19,11 +19,6 @@ namespace Movie_Reviewer__Web_Forms_
                 var reviewId = db.Review;
                 Reviews = db.Review.ToList();
                 Movies = db.Movie.ToList();
-                int dropdownselect = int.Parse(Request.Form["DropDown"]) ;
-                db.Movie.Where(x => x.Id == dropdownselect).First;
-                {
-                    db.Review.Add()
-                    }
             }
         }
     }

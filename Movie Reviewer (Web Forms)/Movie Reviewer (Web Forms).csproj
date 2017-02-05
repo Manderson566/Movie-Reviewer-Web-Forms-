@@ -176,6 +176,14 @@
     <Compile Include="Migrations\201702022133093_RemovedMovietitleFromReviewcs.Designer.cs">
       <DependentUpon>201702022133093_RemovedMovietitleFromReviewcs.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201702051947304_MigrationForAdd.cs" />
+    <Compile Include="Migrations\201702051947304_MigrationForAdd.Designer.cs">
+      <DependentUpon>201702051947304_MigrationForAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702052141039_RemovedMovieIdFromReviewcs.cs" />
+    <Compile Include="Migrations\201702052141039_RemovedMovieIdFromReviewcs.Designer.cs">
+      <DependentUpon>201702052141039_RemovedMovieIdFromReviewcs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -203,6 +211,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201702022133093_RemovedMovietitleFromReviewcs.resx">
       <DependentUpon>201702022133093_RemovedMovietitleFromReviewcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702051947304_MigrationForAdd.resx">
+      <DependentUpon>201702051947304_MigrationForAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702052141039_RemovedMovieIdFromReviewcs.resx">
+      <DependentUpon>201702052141039_RemovedMovieIdFromReviewcs.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -9,29 +9,29 @@ namespace Movie_Reviewer__Web_Forms_
 {
     public partial class Add : System.Web.UI.Page
     {
-        public string ageOfReviewer;
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (IsPostBack)
+            if (Request.Form.AllKeys.Contains("MovieReview"))
             {
                 using (var db = new ReviewContext())
                 {
                     var review = new Review
                     {
+                        
                         MovieReview = Request.Form["MovieReview"],
                         MovieRating = Request.Form["MovieRating"].Count(),
                         ReviewerName = Request.Form["ReviewerName"],
                         GenderofReviewer = Request.Form["GenderofReviewer"],
                         OccupationOfReviewer = Request.Form["OccupationOfReviewer"],
-                        AgeOfReviewer = Request.Form["AgeOfReviewer"].Count()
-
+                        AgeOfReviewer = Request.Form["AgeOfReviewer"].Count(),
+                        DateTimeOfReview = DateTime.Now,
                     };
                     db.Review.Add(review);
                     db.SaveChanges();
                 }
-                Response.Redirect("Default.aspx");
             }
+            Response.Redirect("Default.aspx");
         }
     }
 }

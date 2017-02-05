@@ -15,7 +15,6 @@ namespace Movie_Reviewer__Web_Forms_
         public string GenderofReviewer { get; set; }
         public string OccupationOfReviewer { get; set; }
         public DateTime DateTimeOfReview { get; set; }
-        public int MovieId { get; set; }
         public virtual Movie Movie { get; set; }
 
     }
