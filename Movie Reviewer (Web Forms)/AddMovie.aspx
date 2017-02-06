@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Add.aspx.cs" Inherits="Movie_Reviewer__Web_Forms_.Add" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AddMovie.aspx.cs" Inherits="Movie_Reviewer__Web_Forms_.AddMovie" %>
 
 <!DOCTYPE html>
 

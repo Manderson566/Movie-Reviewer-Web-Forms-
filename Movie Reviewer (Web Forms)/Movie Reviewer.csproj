@@ -102,7 +102,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Add.aspx" />
+    <Content Include="AddMovie.aspx" />
+    <Content Include="AddReview.aspx" />
+    <Content Include="EditMovie.aspx" />
+    <Content Include="MovieNew.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -138,12 +141,19 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Add.aspx.cs">
-      <DependentUpon>Add.aspx</DependentUpon>
+    <Compile Include="AddMovie.aspx.cs">
+      <DependentUpon>AddMovie.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Add.aspx.designer.cs">
-      <DependentUpon>Add.aspx</DependentUpon>
+    <Compile Include="AddMovie.aspx.designer.cs">
+      <DependentUpon>AddMovie.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddReview.aspx.cs">
+      <DependentUpon>AddReview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddReview.aspx.designer.cs">
+      <DependentUpon>AddReview.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -151,6 +161,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditMovie.aspx.cs">
+      <DependentUpon>EditMovie.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditMovie.aspx.designer.cs">
+      <DependentUpon>EditMovie.aspx</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201702021834551_Initial.cs" />
     <Compile Include="Migrations\201702021834551_Initial.Designer.cs">
@@ -184,8 +201,47 @@
     <Compile Include="Migrations\201702052141039_RemovedMovieIdFromReviewcs.Designer.cs">
       <DependentUpon>201702052141039_RemovedMovieIdFromReviewcs.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201702052316158_AddedMovieIdBackinReviewcs.cs" />
+    <Compile Include="Migrations\201702052316158_AddedMovieIdBackinReviewcs.Designer.cs">
+      <DependentUpon>201702052316158_AddedMovieIdBackinReviewcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702052325074_AddedMovieTitleToReviewcs.cs" />
+    <Compile Include="Migrations\201702052325074_AddedMovieTitleToReviewcs.Designer.cs">
+      <DependentUpon>201702052325074_AddedMovieTitleToReviewcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702052354217_RemovedMovieIdAddedMovieTitle.cs" />
+    <Compile Include="Migrations\201702052354217_RemovedMovieIdAddedMovieTitle.Designer.cs">
+      <DependentUpon>201702052354217_RemovedMovieIdAddedMovieTitle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702060002166_ChangedMovieTitleTostring.cs" />
+    <Compile Include="Migrations\201702060002166_ChangedMovieTitleTostring.Designer.cs">
+      <DependentUpon>201702060002166_ChangedMovieTitleTostring.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702060137119_ChangedMovieBackToStringFromViurtual.cs" />
+    <Compile Include="Migrations\201702060137119_ChangedMovieBackToStringFromViurtual.Designer.cs">
+      <DependentUpon>201702060137119_ChangedMovieBackToStringFromViurtual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702060224391_RemovedMovieTittle.cs" />
+    <Compile Include="Migrations\201702060224391_RemovedMovieTittle.Designer.cs">
+      <DependentUpon>201702060224391_RemovedMovieTittle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702060314207_AddedVirtualandMovieIdback.cs" />
+    <Compile Include="Migrations\201702060314207_AddedVirtualandMovieIdback.Designer.cs">
+      <DependentUpon>201702060314207_AddedVirtualandMovieIdback.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702060643282_addedEditAndAddMovie.cs" />
+    <Compile Include="Migrations\201702060643282_addedEditAndAddMovie.Designer.cs">
+      <DependentUpon>201702060643282_addedEditAndAddMovie.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Movie.cs" />
+    <Compile Include="MovieNew.aspx.cs">
+      <DependentUpon>MovieNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MovieNew.aspx.designer.cs">
+      <DependentUpon>MovieNew.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\ReviewContext.cs" />
     <Compile Include="Models\Review.cs" />
@@ -217,6 +273,30 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201702052141039_RemovedMovieIdFromReviewcs.resx">
       <DependentUpon>201702052141039_RemovedMovieIdFromReviewcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702052316158_AddedMovieIdBackinReviewcs.resx">
+      <DependentUpon>201702052316158_AddedMovieIdBackinReviewcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702052325074_AddedMovieTitleToReviewcs.resx">
+      <DependentUpon>201702052325074_AddedMovieTitleToReviewcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702052354217_RemovedMovieIdAddedMovieTitle.resx">
+      <DependentUpon>201702052354217_RemovedMovieIdAddedMovieTitle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702060002166_ChangedMovieTitleTostring.resx">
+      <DependentUpon>201702060002166_ChangedMovieTitleTostring.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702060137119_ChangedMovieBackToStringFromViurtual.resx">
+      <DependentUpon>201702060137119_ChangedMovieBackToStringFromViurtual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702060224391_RemovedMovieTittle.resx">
+      <DependentUpon>201702060224391_RemovedMovieTittle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702060314207_AddedVirtualandMovieIdback.resx">
+      <DependentUpon>201702060314207_AddedVirtualandMovieIdback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702060643282_addedEditAndAddMovie.resx">
+      <DependentUpon>201702060643282_addedEditAndAddMovie.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
