@@ -6,6 +6,7 @@
 <head runat="server">
     <title>Edit Movie</title>
     <link href="Content/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="Content/Theme.css"rel="stylesheet" type="text/css" />
 </head>
 <body>
     <div class="container">
@@ -14,12 +15,12 @@
                 <input class="form-control" type="text" value="<%=movieInstance.MovieTitle %>" name="Movie Title" />
                 <input class="form-control" type="text" value="<%=movieInstance.ReleaseDate %>" name="Release Date" />
                 <input class="form-control" type="text" value="<%=movieInstance.IMDBLink %>" name="IMDB Link" />
-                <p>
-                    Created: <%=movieInstance.Created %>
-                </p>
                 <input type="submit" class="btn btn-success" />
             </div>
         </form>
+
+         
+
     </div>
 </body>
 </html>

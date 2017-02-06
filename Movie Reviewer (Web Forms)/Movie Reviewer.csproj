@@ -138,6 +138,7 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Content\Theme.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -233,6 +234,10 @@
     <Compile Include="Migrations\201702060643282_addedEditAndAddMovie.Designer.cs">
       <DependentUpon>201702060643282_addedEditAndAddMovie.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201702060732219_updatedMoviecsDateTimeToString.cs" />
+    <Compile Include="Migrations\201702060732219_updatedMoviecsDateTimeToString.Designer.cs">
+      <DependentUpon>201702060732219_updatedMoviecsDateTimeToString.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="MovieNew.aspx.cs">
@@ -297,6 +302,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201702060643282_addedEditAndAddMovie.resx">
       <DependentUpon>201702060643282_addedEditAndAddMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702060732219_updatedMoviecsDateTimeToString.resx">
+      <DependentUpon>201702060732219_updatedMoviecsDateTimeToString.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

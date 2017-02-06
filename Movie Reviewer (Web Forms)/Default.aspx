@@ -6,6 +6,7 @@
 <head runat="server">
     <title>Movie Reviews</title>
     <link href="Content/bootstrap.css"rel="stylesheet" type="text/css" />
+    <link href="Content/Theme.css"rel="stylesheet" type="text/css" />
 </head>
 <body>
     <div class ="container">
@@ -50,9 +51,8 @@
             <tbody>
                 <%foreach (var Review in Reviews)
                     {%>
-               
                 <tr>
-                    <td><a href="MovieNew.aspx?id=<%= Review.Id %>"><%= Review.MovieId %></a></td>
+                    <td><a href="MovieNew.aspx?id=<%=Review.Id %>"><%=Review.MovieId %></a></td>
                     <td><%=Review.MovieRating %></td>
                     <td><%=Review.AgeOfReviewer %></td>
                     <td><%=Review.GenderofReviewer %></td>
@@ -63,5 +63,7 @@
                   <% } %>
             </tbody>
         </table> 
+
+
 </body>
 </html>

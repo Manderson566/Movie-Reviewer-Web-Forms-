@@ -6,6 +6,7 @@
 <head runat="server">
     <title>MovieNew</title>
     <link href="Content/bootstrap.css"rel="stylesheet" type="text/css" />
+    <link href="Content/Theme.css"rel="stylesheet" type="text/css" />
 </head>
 <body>
        <div class ="container">
@@ -22,6 +23,27 @@
             <a href="Default.aspx" class="btn btn-default" role="button">Add Review</a>
             </div>
             </form>
+           <h4>Click Title To Edit Movie</h4>
+           <table class="table">
+            <thead>
+                <tr>
+                    <th>Movie Title</th>
+                    <th>Release Date</th>
+                    <th>IMDB Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% foreach (var movie in Movies)
+                    { %>
+                <tr>
+                    <td><a href="EditMovie.aspx?id=<%= movie.Id %>"><%= movie.MovieTitle %></a></td>
+                    <td><%= movie.ReleaseDate %></td>
+                    <td><%= movie.IMDBLink %></td>
+                </tr>
+                <%} %>
+            </tbody>
+        </table>
+
     </div>
 </body>
 </html>
